@@ -14,7 +14,7 @@ class Student:
 
         StudentDatabase.add_student(self)
 
-def enroll_student(self) -> None:
+    def enroll_student(self) -> None:
         if self.__is_enrolled:
             print("Student is already enrolled.")
         else:
