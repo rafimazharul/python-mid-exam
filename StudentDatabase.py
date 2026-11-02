@@ -13,3 +13,10 @@ class Student:
         self.__is_enrolled = False
 
         StudentDatabase.add_student(self)
+
+def enroll_student(self) -> None:
+        if self.__is_enrolled:
+            print("Student is already enrolled.")
+        else:
+            self.__is_enrolled = True
+            print("Student enrolled successfully.")
