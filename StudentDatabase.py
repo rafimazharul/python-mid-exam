@@ -27,3 +27,13 @@ class Student:
         else:
             self.__is_enrolled = False
             print("Student dropped successfully.")
+
+    def view_student_info(self) -> None:
+        print(f"Student ID: {self.__student_id}")
+        print(f"Name: {self.__name}")
+        print(f"Department: {self.__department}")
+
+        if self.__is_enrolled:
+            print("Enrollment Status: Enrolled")
+        else:
+            print("Enrollment Status: Not Enrolled")
