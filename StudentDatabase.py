@@ -20,3 +20,10 @@ class Student:
         else:
             self.__is_enrolled = True
             print("Student enrolled successfully.")
+
+    def drop_student(self) -> None:
+        if not self.__is_enrolled:
+            print("Student is not enrolled.")
+        else:
+            self.__is_enrolled = False
+            print("Student dropped successfully.")
