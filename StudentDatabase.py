@@ -37,3 +37,49 @@ class Student:
             print("Enrollment Status: Enrolled")
         else:
             print("Enrollment Status: Not Enrolled")
+
+        print()
+
+student1 = Student(101, "Rafi", "CSE")
+student2 = Student(102, "Rahim", "EEE")
+student3 = Student(103, "Karim", "BBA")
+
+
+while True:
+    print("1. View All Students")
+    print("2. Enroll Student")
+    print("3. Drop Student")
+    print("4. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        for student in StudentDatabase.student_list:
+            student.view_student_info()
+
+    elif choice == "2":
+        student_id = int(input("Enter Student ID: "))
+
+        for student in StudentDatabase.student_list:
+            if student._Student__student_id == student_id:
+                student.enroll_student()
+                break
+        else:
+            print("Invalid student ID.")
+
+    elif choice == "3":
+        student_id = int(input("Enter Student ID: "))
+
+        for student in StudentDatabase.student_list:
+            if student._Student__student_id == student_id:
+                student.drop_student()
+                break
+        else:
+            print("Invalid student ID.")
+
+    elif choice == "4":
+        print("Program ended.")
+        break
+
+    else:
+        print("Invalid choice.")
